@@ -18,7 +18,7 @@ const Stacks = () => {
   //   fetchStackData();
   // }, []);
 
-  const data = DUMMY_STACK_DATA.map((item) => ({...item, 'key': item.id, is_shared: item.is_shared ? "Shared" : "Not Shared"}));
+  const data = DUMMY_STACK_DATA.map((item) => ({...item, 'key': item.id}));
 
   return (
     <>

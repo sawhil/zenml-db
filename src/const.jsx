@@ -1,3 +1,5 @@
+import { Button } from "antd";
+
 export const SIDE_BAR_NAV_ITEMS = [
     {'label': 'Stacks', 'key': '/stacks'},
     {'label': 'Stack Components', 'key': '/stack-components'}
@@ -8,6 +10,7 @@ export const STACK_COLS = [
       title: 'ID',
       dataIndex: 'id',
       key: 'id',
+      ellipsis: true,
     },
     {
       title: 'Name',
@@ -18,11 +21,13 @@ export const STACK_COLS = [
       title: 'Shared',
       dataIndex: 'is_shared',
       key: 'is_shared',
+      render: (is_shared) => (is_shared ? "Shared" : "Not Shared"),
     },
     {
       title: 'User',
       dataIndex: 'user',
       key: 'user',
+      ellipsis: true,
     },
     {
       title: 'Date Created',
@@ -42,6 +47,16 @@ export const COMPONENT_COLS = [
     title: 'Component Type',
     dataIndex: 'component_type',
     key: 'component_type',
+  },
+  {
+    title: 'Action',
+    dataIndex: 'id',
+    key: 'id',
+    render: (index, record) => (
+      <Button type="primary" onClick={() => console.log(record)}>
+        View
+      </Button>
+    ),
   },
 ];
 
