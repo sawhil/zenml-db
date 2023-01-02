@@ -4,12 +4,15 @@ import { STACK_COLS } from '../../const';
 import { DUMMY_STACK_DATA } from '../../const';
 import StackComponents from '../StackComponents';
 
-
-// const baseURL = 'http://localhost:5000/api/stacks';
+// const baseURL = 'https://mqlc2m.deta.dev/stacks';
 
 const Stacks = () => {
-  // const [stackData, setStackData] = useState();
 
+  // Declaring the state to store the Stacks' Data
+  const [stackData, setStackData] = useState(DUMMY_STACK_DATA);
+
+
+  // Fetching the data from API since as of now it doesn't support CORS using DUMMY DATA
   // useEffect(() => {
   //   const fetchStackData = async () => {
   //     const response = await axios.get(baseURL);
@@ -18,8 +21,11 @@ const Stacks = () => {
   //   fetchStackData();
   // }, []);
 
-  const data = DUMMY_STACK_DATA.map((item) => ({...item, 'key': item.id}));
+  const data = stackData.map((item) => ({...item, 'key': item.id}));
 
+  // Using AntD Table Component to Render the Table with Stack Data
+  // And Using StackComponents component to show the component data
+  // in a nested table form.
   return (
     <>
       <h1>Stacks</h1>

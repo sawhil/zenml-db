@@ -1,6 +1,9 @@
 import { Button } from "antd";
 
+// Declaring all the constants being used in the components
+
 export const SIDE_BAR_NAV_ITEMS = [
+    {'label': 'Home', 'key': '/'},
     {'label': 'Stacks', 'key': '/stacks'},
     {'label': 'Stack Components', 'key': '/stack-components'}
 ];
@@ -36,7 +39,6 @@ export const STACK_COLS = [
     },
 ];
 
-
 export const COMPONENT_COLS = [
   {
     title: 'Component ID',
@@ -52,11 +54,12 @@ export const COMPONENT_COLS = [
     title: 'Action',
     dataIndex: 'id',
     key: 'id',
-    render: (index, record) => (
-      <Button type="primary" onClick={() => console.log(record)}>
+    render: (index, record) => {
+      return (
+      <Button type="primary" onClick={() => {window.alert("Show Component Data in Modal or Navigate to the /components/component_id then Handle it there")}}>
         View
-      </Button>
-    ),
+      </Button>)
+    },
   },
 ];
 
