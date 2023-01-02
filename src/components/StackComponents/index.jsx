@@ -11,11 +11,13 @@ const StackComponents = (props) => {
         data.push({'component_type': key, 'component_id': dataObj[key][0], 'key': dataObj[key][0]});
     }
 
+    console.log(COMPONENT_COLS);
+
     // Using AntD Table Component to Render the Table with Components' Data
     return (
         <>
             <Table
-                zcolumns={COMPONENT_COLS}
+                columns={COMPONENT_COLS}
                 bordered={true}
                 tableLayout="fixed"
                 dataSource={data}
