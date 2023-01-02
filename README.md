@@ -13,7 +13,7 @@
 
 # Question Asked
 
-- What is an ideal way to visualize a stack and a stack component?
+1. What is an ideal way to visualize a stack and a stack component?
 - Ideal Way to Visualize a Stack is as a row and for components we can do it in two steps
 - First is to show as a nested collapsed table for a stack and show minimal data and second is
 - to pop up a modal or navigate to a seperate page to show the detailed configuration and data
@@ -21,16 +21,16 @@
 
 
 
-- What is the easiest way to navigate these stacks and stack components when they are many of them?
+2. What is the easiest way to navigate these stacks and stack components when they are many of them?
 - Using Dynamic Routing such as "/stacks/stack_id"  or "components/component_id"
 
 
-- How does one showcase the connection between a stack and its stack components?
+3. How does one showcase the connection between a stack and its stack components?
 - Using Nested Tables in which parent is the stack and child are the components
 - or maybe we can group different types of components based on the component types
 
 
-- How can you as the frontend developer create a UI that is 'forward-facing', i.e., if the API adds more functions to create stacks and stack components in the future, how many changes will need to be made to cater to these changes.
+4. How can you as the frontend developer create a UI that is 'forward-facing', i.e., if the API adds more functions to create stacks and stack components in the future, how many changes will need to be made to cater to these changes.
 - Since we want to keep it forward facing we should keep the ui components and logic as decoupled 
 - as possible with the state. So in case of new stack being created we should send a creation
 - request to BackEnd and simultaneously updating the state on FrontEnd while keeping a check on if the
